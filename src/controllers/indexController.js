@@ -6,6 +6,9 @@ const path = require("path");
 const indexController = {
     home: (req,res)=>{
         res.render("index")
+    },
+    services: (req,res)=>{
+        res.render("index")
     }
 }
 
