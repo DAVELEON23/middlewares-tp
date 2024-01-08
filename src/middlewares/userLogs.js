@@ -1,8 +1,8 @@
-const fs = require ("fs");
+const fs = require("fs")
 
-function login (req,res,next) {
-    fs.readFileSync("userLogs.txt", "Ingresaste a la pagina" + req.url+'\n') //para dejar registro en el archivo txt
+const logMiddleware = (req, res, next) => {
+    fs.appendFileSync("./src/logs/userLogs.txt", `El usuario ingresó a la ruta: ${req.url}\n`);
     next();
-}
+};
 
-module.exports = login 
+module.exports = logMiddleware

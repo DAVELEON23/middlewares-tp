@@ -3,17 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home Page</title>
+	<title>login</title>
 	<link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-	<h1>Home Page</h1>
+	<h1>Vista Administrador</h1>
 	<header>
-		<ul type="none">
-			<li><a href="/">Inicio</a></li>
-			<li><a href="/users/admin">Usuario</a></li>
-			<li><a href="/services">Service</a></li>
-		</ul>
+	<form action="/users/admin" method="POST">
+        <label for="name">Nombre:</label>
+						<input type="text" name="user"  >
+						<button type="submit"> Ingresar </button>
+    </form>
 	</header>
 	<img src="/images/node.jpg" width="60%">
 </body>
